@@ -17,27 +17,17 @@ public class MyWindow extends JFrame implements ActionListener{
    MainView mv = new MainView();
    WaitRoom wr = new WaitRoom();
    GameRoom gr = new GameRoom();
-   RoomMake rm = new RoomMake();
+   //RoomMake rm = new RoomMake();
    CardLayout card = new CardLayout();
     // 윈도우 설정
    MyWindow()  {
       
-      /*JMenuBar bar=new JMenuBar();
-         JMenu menu=new JMenu("File");
-         JMenuItem home=new JMenuItem("홈");
-         JMenuItem join=new JMenuItem("회원가입");
-         JMenuItem movie=new JMenuItem("영화목록");
-         
-         menu.add(home);
-         menu.add(join);
-         menu.add(movie);
-         
-         bar.add(menu);*/
+
       setLayout(card);
       add("MV",mv);
       add("MF",wr);
       add("GR",gr);
-      add("RM",rm);
+      //add("RM",rm);
       
       // 윈도우 크기
       setSize(1600, 900);
@@ -53,7 +43,7 @@ public class MyWindow extends JFrame implements ActionListener{
       wr.b5.addActionListener(this); 
       wr.b6.addActionListener(this);
       gr.b3.addActionListener(this);
-      //rm.b7.addActionListener(this);
+    //  rm.b7.addActionListener(this);
    }
    public static void main(String[] args) {
       // TODO Auto-generated method stub
@@ -84,10 +74,6 @@ public class MyWindow extends JFrame implements ActionListener{
          card.show(getContentPane(), "MF");
       }
       
-      /*if(e.getSource()==rm.b7)                     // 화면넘기기
-      {
-         card.show(getContentPane(), "MF");
-      }*/
     
    }
 
